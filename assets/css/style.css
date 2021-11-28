@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+} 
+
+/* estilos gerais */
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+/* menu */
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.menu {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* logo */
+
+.menu .logo {
+  width: 200px;
+}
+
+.menu .logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* links menu */
+
+.menu .links-menu {
+  max-width: 950px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.menu .links-menu .links ul,
+.menu .links-menu .login ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu .links-menu .links ul li,
+.menu .links-menu .login ul li {
+  margin: 0 5px 0 0;
+}
+
+  .menu .links-menu .links ul li:nth-of-type(6),
+  .menu .links-menu .login ul li:nth-of-type(2) {
+    margin: 0;
+  }
+
+.menu .links-menu .links ul li a,
+.menu .links-menu .login ul li a {
+  padding: 12px 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #266251;
+}
+
+/* menu hamburgúer */ 
+
+.menu-mobile {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+.menu-mobile img {
+  width: 90px;
+}
+
+/* banner home */
+
+.container-banner {
+  height: 100vh;
+  width: 100%;
+  background-color: #6ce7c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner .msg-boas-vindas {
+  padding: 5px 5px 5px 30px;
+}
+
+.banner .msg-boas-vindas h1 {
+  font-size: 4.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  color: #266251;
+}
+
+.banner .msg-boas-vindas form {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  border-radius: 90px;
+  background-color: #fff;
+  padding: 12px;
+  justify-content: space-between;
+}
+
+.banner .msg-boas-vindas form input {
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+
+.banner .msg-boas-vindas form input[type="submit"] {
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: #266251;
+  color: #fff;
+  cursor: pointer;
+}
+
+.banner .img-pikachu {
+  width: 800px;
+}
+
+.banner .img-pikachu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* responsivo */
+
+@media screen and (max-width: 1211px) {
+  .menu .links-menu {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .banner .msg-boas-vindas h1 {
+    font-size: 3.8rem;
+  }
+
+  .banner .msg-boas-vindas form input {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .banner {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .banner .msg-boas-vindas {
+    padding: 5px;
+  }
+
+  .banner .msg-boas-vindas h1 {
+    text-align: center;
+  }
+
+  .banner .msg-boas-vindas form {
+    margin: auto;
+  }
+
+  .banner .img-pikachu {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 731px) {
+  .banner .img-pikachu {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .banner .msg-boas-vindas h1 {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .banner .img-pikachu {
+    width: 320px;
+    margin: 10px 0;
+  }
+
+  .banner .msg-boas-vindas h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .banner .img-pikachu {
+    width: 300px;
+  }
+
+  .banner .msg-boas-vindas form {
+    max-width: 300px;
+    justify-content: space-around;
+  }
+
+  .banner .msg-boas-vindas form input[type="submit"] {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu {
+    padding: 0 10px;
+  }
+
+  .menu-mobile {
+    right: 0;
+  }
+}
